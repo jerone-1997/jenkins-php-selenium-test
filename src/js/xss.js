@@ -12,7 +12,7 @@ function checkXSS() {
             if (data.success == true) {
                 searchBox.value = "";
             } else {
-                window.location.href = "dashboard.php";
+                window.location = "dashboard.php";
             }
             return false;
         },
