@@ -11,7 +11,7 @@ if (isset($_POST['action'])) {
 
         } else {
             $success = false;
-            $_SESSION['hello'] = $checkTheValue;
+            $_SESSION['hello'] = $_POST["formValue"];
         }
 
         
