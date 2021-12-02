@@ -1,10 +1,10 @@
 <?php 
 	session_start();
-	if(!isset($_SESSION['hello']))
+	/*if(!isset($_SESSION['hello']))
 	{
 		header('location:index.php');
 		exit;
-	}
+	}*/
 ?>
 
 <!DOCTYPE html>
