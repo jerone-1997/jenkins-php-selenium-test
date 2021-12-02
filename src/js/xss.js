@@ -14,6 +14,7 @@ function checkXSS() {
             } else {
                 window.location.href = "dashboard.php";
             }
+            return false;
         },
         error: function (request, status, error) {
             console.log(request);
