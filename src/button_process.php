@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('sanitize_input.php');
 if (isset($_POST['action'])) {
     if ($_POST['action'] === 'checkXSS') {
@@ -7,6 +8,8 @@ if (isset($_POST['action'])) {
         // If XSS, send signal back to JS
         if ($checkTheValue) {
             $success = true;
+
+            $_SESSION['hello'] = $checkTheValue;
         } else {
             $success = false;
         }
