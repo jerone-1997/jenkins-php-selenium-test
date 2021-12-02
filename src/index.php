@@ -13,7 +13,7 @@
 	
 	<div class="container">
 		<h1>ICT3x03 Lab Test Jerone Poh 1902606</h1>
-		<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+		<form action="" method="post">
 			<div class="field-container">
 				<label>Search</label>
 				<input type="text" id="search" name="search" required placeholder="">
