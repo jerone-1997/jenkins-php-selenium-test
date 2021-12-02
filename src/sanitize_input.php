@@ -2,7 +2,7 @@
 function checkIfXSS($input) {
     preg_match('<script>', $input, $match);
     if (count($match) >= 1) {
-        reutrn True;
+        return True;
     } else {
         return False;
     }
