@@ -21,7 +21,7 @@
 					<input type="text" id="search" name="search" required placeholder="">
 				</div>
 				<div class="field-container">
-					<input type="submit" name="Search"></button>
+					<input type="submit" name="submit"></button>
 				</div>
 				
 			</form>
