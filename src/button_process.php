@@ -2,7 +2,7 @@
 require_once('sanitize_input.php');
 if (isset($_POST['action'])) {
     if ($_POST['action'] === 'checkXSS') {
-        $checkTheValue = checkIfXSS($_POST["getEmailToken"]);
+        $checkTheValue = checkIfXSS($_POST["formValue"]);
 
         // If XSS, send signal back to JS
         if ($checkTheValue) {
