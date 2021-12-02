@@ -15,13 +15,13 @@
 	<body>
 		<div class="container">
 			<h1>ICT3x03 Lab Test Jerone Poh 1902606</h1>
-			<form action="" method="post">
+			<form action="" method="post" onsubmit="return checkXSS()">
 				<div class="field-container">
 					<label>Search</label>
 					<input type="text" id="search" name="search" required placeholder="">
 				</div>
 				<div class="field-container">
-					<button type="submit" name="submit" onclick="return checkXSS()">Search</button>
+					<input type="submit" name="submit">Search</button>
 				</div>
 				
 			</form>
