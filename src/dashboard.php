@@ -1,28 +1,20 @@
 <?php 
 	session_start();
-		
-	if(!isset($_SESSION['user_id']))
-	{
-		header('location:index.php');
-		exit;
-	}
-	
-
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dashboard | PHP Login and logout example with session</title>
+<title>Dashboard | ICT3x03 Test</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 	<div class="container-dashboard">
-		Welcome to the dashboard! <span class="user-name"><?php echo ucwords($_SESSION['first_name'])?> <?php echo ucwords($_SESSION['last_name']);?> </span> 
+		Searched Term to be displayed here: <span class="user-name"><?php $_SESSION['hello'])?></span> 
 		<br>
 		
-		<a href="logout.php?logout=true" class="logout-link">Logout</a>
+		<a href="index.php" class="logout-link">Back to Search Page</a>
 	</div>
 </body>
 </html>
