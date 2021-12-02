@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package test.java.mycompany.app;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
