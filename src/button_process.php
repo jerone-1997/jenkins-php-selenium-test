@@ -9,9 +9,9 @@ if (isset($_POST['action'])) {
         if ($checkTheValue) {
             $success = true;
 
-            $_SESSION['hello'] = $checkTheValue;
         } else {
             $success = false;
+            $_SESSION['hello'] = $checkTheValue;
         }
 
         
