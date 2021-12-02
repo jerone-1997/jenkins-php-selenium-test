@@ -23,11 +23,13 @@ public class AppTest
 {
 	WebDriver driver; 
 	WebDriverWait wait; 
-	String url = "http://10.0.2.15";
-	String validEmail = "user@example.com";
-	String validPassword = "password1234";
-	String invalidEmail = "none@example.com";
-	String invalidPassword = "password";
+
+	// Jerone Poh's VM
+	String url = "http://3.145.77.2";
+	String validSearch = "Jerone Poh";
+
+	// XSS Input
+	String invalidSearch = "<script>alert('Attacked By Jerone Poh')</script>";
 
     @Before
     public void setUp() { 
@@ -41,17 +43,16 @@ public class AppTest
 	}	 
 	
     @Test
-    public void testLoginWithValidEmailValidPassword() 
+    public void testLoginWithValidForm() 
 		throws InterruptedException { 
 
 		//get web page
 		driver.get(url);
 		//wait until page is loaded or timeout error
-		wait.until(ExpectedConditions.titleContains("Login Page |")); 
+		wait.until(ExpectedConditions.titleContains("ICT3x03 |")); 
 
 		//enter input
-		driver.findElement(By.name("email")).sendKeys(validEmail);
-		driver.findElement(By.name("password")).sendKeys(validPassword);
+		driver.findElement(By.name("search")).sendKeys(validSearch);
 		//click submit
 		driver.findElement(By.name("submit")).submit();
 	
@@ -62,7 +63,7 @@ public class AppTest
 	}
 		
 	@Test
-    public void testLoginWithValidEmailInvalidPassword() 
+    public void testLoginWithXSSForm() 
 		throws InterruptedException { 
 
 		//get web page
@@ -71,15 +72,13 @@ public class AppTest
 		wait.until(ExpectedConditions.titleContains("Login Page |")); 
 
 		//enter input
-		driver.findElement(By.name("email")).sendKeys(validEmail);
-		driver.findElement(By.name("password")).sendKeys(invalidPassword);
+		driver.findElement(By.name("search")).sendKeys(invalidSearch);
+
 		//click submit
 		driver.findElement(By.name("submit")).submit();
-	
-		//check result
-		By errorMsgId = By.className("error-msg");
-		String expectedResult = "Login failed"; 
-		boolean isResultCorrect = wait.until(ExpectedConditions.textToBe(errorMsgId, expectedResult)); 
+		
+		String expectedResult = "ICT3x03 |"; 
+		boolean isResultCorrect = wait.until(ExpectedConditions.titleContains(expectedResult)); 
 		assertTrue(isResultCorrect == true); 
 	}
 

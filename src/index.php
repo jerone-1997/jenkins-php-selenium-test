@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login Page | PHP Login and logout example with session</title>
+<title>ICT3x03 | PHP Form XSS Test</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
