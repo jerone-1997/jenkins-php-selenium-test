@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage ('Checkout') { 
             steps { 
-                git branch:'master', url: 'https://github.com/jerone-1997/jenkins-php-selenium-test' 
+                git branch:'master', url: 'https://github.com/jerone-1997/jenkins-php-selenium-test.git' 
             } 
         } 
          
