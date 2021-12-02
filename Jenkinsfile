@@ -37,19 +37,19 @@ pipeline {
         } 
          
         stage('Code Quality Check via SonarQube') { 
-           steps { 
-               script { 
+			steps { 
+				script { 
 				   	def scannerHome = tool 'SonarQube'; 
 				   	withSonarQubeEnv('SonarQube') { 
 					   sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OWSAP -Dsonar.sources=." 
 					} 
 				} 
-           } 
-        } 
-		post { 
-			always { 
-				recordIssues enabledForFailure: true, tool: sonarQube() 
 			} 
-    	} 
+        } 
+    } 
+	post { 
+		always { 
+			recordIssues enabledForFailure: true, tool: sonarQube() 
+		} 
     } 
 }
