@@ -3,7 +3,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en" xml:lang="en">
 	<head>
 		<title>Dashboard | ICT3x03 Test</title>
 		<link rel="stylesheet" href="style.css">

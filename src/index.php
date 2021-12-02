@@ -6,7 +6,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en" xml:lang="en">
 	<head>
 		<title>ICT3x03 | PHP Form XSS Test</title>
 		<link rel="stylesheet" href="style.css">
