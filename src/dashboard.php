@@ -11,7 +11,7 @@
 
 	<body>
 		<div class="container-dashboard">
-			Displayed: <?php echo $_SESSION['hello']?>
+			Displayed: <?php echo '<div class="output">'.$_SESSION["hello"].'</div>'?>
 			<br>
 			
 			<a href="index.php" class="logout-link">Back to Search Page</a>
