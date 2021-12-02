@@ -17,6 +17,13 @@ pipeline {
 				} 
 			} 
         } 
+
+		post { 
+			always { 
+				recordIssues enabledForFailure: true, tool: sonarQube() 
+			} 
+    	} 
+
 		stage('Integration UI Test') {
 			parallel {
 				stage('Deploy') {
@@ -46,10 +53,5 @@ pipeline {
 				}
 			}
 		}
-    } 
-	post { 
-		always { 
-			recordIssues enabledForFailure: true, tool: sonarQube() 
-		} 
     } 
 }
